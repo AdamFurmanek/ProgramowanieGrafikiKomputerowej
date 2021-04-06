@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Lab0">
+      <UniqueIdentifier>{eeacbe6f-ea1a-483b-803f-daaf4576299d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lab1">
+      <UniqueIdentifier>{80d22845-3f6f-400c-afd1-c1bb42aef550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lab2">
+      <UniqueIdentifier>{a9d89d66-6e1b-4c1c-854a-78fa9b6b3cee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lab3">
+      <UniqueIdentifier>{8dbd4575-09ac-48d8-a72f-ee22934626a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lab4">
+      <UniqueIdentifier>{d141245e-887b-45dc-a47b-e5f8accb5d82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cParticle.cpp">
+      <Filter>Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Targa.cpp">
+      <Filter>lab4</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lab0zad1.h">
+      <Filter>Lab0</Filter>
+    </ClInclude>
+    <ClInclude Include="lab0zad2.h">
+      <Filter>Lab0</Filter>
+    </ClInclude>
+    <ClInclude Include="lab1zad1.h">
+      <Filter>Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="lab1zad2.h">
+      <Filter>Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="lab2zad1.h">
+      <Filter>lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="lab3zad1.h">
+      <Filter>Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="cParticle.h">
+      <Filter>Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="lab4zad1.h">
+      <Filter>lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Targa.h">
+      <Filter>lab4</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
