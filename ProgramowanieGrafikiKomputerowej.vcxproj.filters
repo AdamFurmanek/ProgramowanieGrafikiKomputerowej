@@ -24,6 +24,9 @@
     <Filter Include="lab4">
       <UniqueIdentifier>{d141245e-887b-45dc-a47b-e5f8accb5d82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lab5">
+      <UniqueIdentifier>{f450b0b3-93ff-4624-bc5d-3650073aea07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +69,12 @@
     </ClInclude>
     <ClInclude Include="Targa.h">
       <Filter>lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="lab5zad1.h">
+      <Filter>lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.h">
+      <Filter>lab5</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
