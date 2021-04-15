@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\lab6zad1.h(38,16): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\lab6zad1.h(43,12): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  ProgramowanieGrafikiKomputerowej.vcxproj -> C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\Debug\ProgramowanieGrafikiKomputerowej.exe

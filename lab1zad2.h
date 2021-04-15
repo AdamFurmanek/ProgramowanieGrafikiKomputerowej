@@ -7,7 +7,7 @@ using namespace std;
 
 double cameraX = 0;
 double cameraY = 0;
-double speed = 3.0;
+double cameraSpeed = 3.0;
 GLuint lista;
 
 void Display() {
@@ -87,16 +87,16 @@ void Keyboard(unsigned char key, int x, int y)
 	switch (key)
 	{
 	case 'w':
-		cameraX += speed;
+		cameraX += cameraSpeed;
 		break;
 	case 's':
-		cameraX -= speed;
+		cameraX -= cameraSpeed;
 		break;
 	case 'a':
-		cameraY += speed;
+		cameraY += cameraSpeed;
 		break;
 	case 'd':
-		cameraY -= speed;
+		cameraY -= cameraSpeed;
 		break;
 	case 27:
 	case 'q':

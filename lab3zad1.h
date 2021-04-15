@@ -13,7 +13,7 @@ using namespace std;
 
 double cameraX = 0;
 double cameraY = 0;
-double speed = 3.0;
+double cameraSpeed = 3.0;
 GLuint lista;
 cParticle particles[MAX_PART];
 float act_time = 0;
@@ -88,10 +88,10 @@ void Keyboard(unsigned char key, int x, int y)
 	case ' ':
 		figure = !figure;
 	case 'a':
-		cameraY += speed;
+		cameraY += cameraSpeed;
 		break;
 	case 'd':
-		cameraY -= speed;
+		cameraY -= cameraSpeed;
 		break;
 	case 27:
 	case 'q':

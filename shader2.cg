@@ -1,0 +1,42 @@
+struct Vertex 
+{
+	float4 position : POSITION;
+	float4 color	: COLOR0;
+};
+
+Vertex main(Vertex IN,	uniform float4x4 ModelViewProj, float wave)
+{
+	Vertex OUT;
+
+	//Obliczenie wysokoœci wektorów wznosz¹cych siê i opadaj¹cych.
+	float up = sin(abs(wave)-(int)abs(wave));
+	float down = sin((int)abs(wave)-abs(wave)+1);
+
+	//Dla dodatnich wartoœci wave, trzeba odwróciæ opadanie i wznoszenie.
+	if(wave>0){
+		wave++;
+		float temp = up;
+		up = down;
+		down = temp;
+	}
+
+	//Wektor wznosz¹cy.
+	if(IN.position.x == (int)wave)
+		IN.position.y = up;
+	//Wektor œrodkowy.
+	else if(IN.position.x == (int)wave+1)
+		IN.position.y = sin(1);
+	//Wektor opadaj¹cy.
+	else if(IN.position.x == (int)wave+2)
+		IN.position.y = down;
+
+	//Kolor niebieski, lub bia³y jeœli wektor jest wysoko.
+	IN.color.x = IN.position.y*1.5;
+	IN.color.y = IN.position.y*1.5;
+	IN.color.z = 1;
+
+	OUT.position = mul(ModelViewProj, IN.position);
+	OUT.color.xyz = IN.color.xyz;
+
+	return OUT;
+}

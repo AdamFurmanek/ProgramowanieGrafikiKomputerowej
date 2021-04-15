@@ -5,13 +5,18 @@
 #include "Ball.h"
 #include <math.h>
 
+#include <Cg/cg.h>    /* Can't include this?  Is Cg Toolkit installed! */
+#include <Cg/cgGL.h>
+
+#define M_PI 3.14159265358979323846
+
 Ball *balls[5];
 
 int ballsAmount = 5;
 
 void BallCollision(float x1, float y1, float x2, float y2, float &mx1, float &my1, float &mx2, float &my2, float r1, float r2) {
 	 //Funkcja na podstawie poradnika https://www.plasmaphysics.org.uk/programs/coll2d_cpp.htm
-	 float r21 = r2 / r1;
+	 float r21 = (pow(r2,3)* M_PI * 3 / 4)/ (pow(r1, 3) * M_PI * 3 / 4);
 	 float x21 = x2 - x1;
 	 float y21 = y2 - y1;
 	 float vx21 = mx2 - mx1;
