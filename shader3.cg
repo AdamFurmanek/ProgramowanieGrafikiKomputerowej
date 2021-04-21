@@ -1,0 +1,27 @@
+struct Vertex 
+{
+	float4 position : POSITION;
+	float4 color	: COLOR0;
+};
+
+Vertex main(Vertex IN,	uniform float4x4 ModelViewProj, float timer)
+{
+	Vertex OUT;		
+	//Oddalenie wektorów od œrodka 
+	if(IN.position.y > 0){
+		IN.position.x += (IN.position.x>0) ? -timer : timer;
+		IN.position.z += (IN.position.z>0) ? -timer : timer;
+		//IN.position.x = abs(IN.position.x - timeParameter);
+		//IN.position.z = abs(IN.position.z - timeParameter);
+	}
+
+	//Kolory w zale¿noœci od po³o¿enia (têczowe).
+	IN.color.x = IN.position.x;
+	IN.color.y = IN.position.y;
+	IN.color.z = IN.position.z;
+
+	OUT.position = mul(ModelViewProj, IN.position);
+	OUT.color.xyz = IN.color.xyz;
+
+	return OUT;
+}

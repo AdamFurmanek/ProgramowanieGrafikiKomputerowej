@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(CG_INC_PATH);c:\Program Files\NVIDIA Corporation\Cg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\CG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(CG_INC_PATH);c:\Program Files\NVIDIA Corporation\Cg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\CG\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,9 +150,10 @@
     <ClCompile Include="Targa.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="lab6\shader.cg" />
+    <None Include="lab6\shader2.cg" />
     <None Include="packages.config" />
-    <None Include="shader.cg" />
-    <None Include="shader2.cg" />
+    <None Include="shader3.cg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
@@ -165,8 +166,9 @@
     <ClInclude Include="lab3zad1.h" />
     <ClInclude Include="lab4zad1.h" />
     <ClInclude Include="lab5zad1.h" />
-    <ClInclude Include="lab6zad1.h" />
-    <ClInclude Include="lab6zad2.h" />
+    <ClInclude Include="lab6\lab6zad1.h" />
+    <ClInclude Include="lab6\lab6zad2.h" />
+    <ClInclude Include="lab7zad1.h" />
     <ClInclude Include="Targa.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
