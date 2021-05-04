@@ -1,0 +1,40 @@
+
+struct pixel {
+  float4 color : COLOR;
+};
+
+pixel main(pixel IN, uniform float timer)
+{
+	float liczbaProgow = timer;
+	float prog = (float)1/liczbaProgow;
+	pixel OUT;
+	
+	for(int i = 0; i < liczbaProgow + 2; i++){
+		if(IN.color.x < i * prog){
+			OUT.color.x = i * prog;
+			break;
+		}
+	}
+
+	for(int i = 0; i < liczbaProgow + 2; i++){
+		if(IN.color.y < i * prog){
+			OUT.color.y = i * prog;
+			break;
+		}
+	}
+
+	for(int i = 0; i <= liczbaProgow + 2; i++){
+		if(IN.color.z < i * prog){
+			OUT.color.z = i * prog;
+			break;
+		}
+	}
+
+	OUT.color.x = 1 - OUT.color.x;
+	OUT.color.y = 1 - OUT.color.y;
+	OUT.color.z = 1 - OUT.color.z;
+
+	return OUT;
+}
+
+

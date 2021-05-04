@@ -33,6 +33,9 @@
     <Filter Include="lab7">
       <UniqueIdentifier>{875c209f-ca3a-4f8c-9961-f9a73d98379c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lab8">
+      <UniqueIdentifier>{bc04fabc-4333-4902-84f0-e2758a2564a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,14 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="lab6\shader.cg">
-      <Filter>lab6</Filter>
-    </None>
-    <None Include="lab6\shader2.cg">
-      <Filter>lab6</Filter>
-    </None>
     <None Include="shader3.cg">
       <Filter>lab7</Filter>
+    </None>
+    <None Include="shader.cg">
+      <Filter>lab6</Filter>
+    </None>
+    <None Include="shader2.cg">
+      <Filter>lab6</Filter>
+    </None>
+    <None Include="fragmentShader1.cg">
+      <Filter>lab8</Filter>
+    </None>
+    <None Include="fragmentShader2.cg">
+      <Filter>lab8</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -94,11 +103,17 @@
     <ClInclude Include="lab7zad1.h">
       <Filter>lab7</Filter>
     </ClInclude>
-    <ClInclude Include="lab6\lab6zad1.h">
+    <ClInclude Include="lab6zad1.h">
       <Filter>lab6</Filter>
     </ClInclude>
-    <ClInclude Include="lab6\lab6zad2.h">
+    <ClInclude Include="lab6zad2.h">
       <Filter>lab6</Filter>
+    </ClInclude>
+    <ClInclude Include="lab8zad1.h">
+      <Filter>lab8</Filter>
+    </ClInclude>
+    <ClInclude Include="lab8zad2.h">
+      <Filter>lab8</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

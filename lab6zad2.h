@@ -6,7 +6,7 @@
 
 CGcontext	cgContext;
 CGprogram	cgProgram;
-CGprofile	cgVertexProfile;
+CGprofile	cgFragmentProfile;
 CGparameter	modelViewMatrix, position, color, wave;
 
 int waveLength = 6, waveWidth = 5;
@@ -21,9 +21,9 @@ void init() {
 	glEnable(GL_DEPTH_TEST);
 
 	cgContext = cgCreateContext();
-	cgVertexProfile = cgGLGetLatestProfile(CG_GL_VERTEX);
-	cgGLSetOptimalOptions(cgVertexProfile);
-	cgProgram = cgCreateProgramFromFile(cgContext, CG_SOURCE, "shader2.cg", cgVertexProfile, "main", 0);
+	cgFragmentProfile = cgGLGetLatestProfile(CG_GL_VERTEX);
+	cgGLSetOptimalOptions(cgFragmentProfile);
+	cgProgram = cgCreateProgramFromFile(cgContext, CG_SOURCE, "shader2.cg", cgFragmentProfile, "main", 0);
 	cgGLLoadProgram(cgProgram);
 	position = cgGetNamedParameter(cgProgram, "IN.position");
 	color = cgGetNamedParameter(cgProgram, "IN.color");
@@ -43,7 +43,7 @@ void display() {
 	glScalef(0.1, 0.1, 0.1);
 
 	cgGLSetStateMatrixParameter(modelViewMatrix, CG_GL_MODELVIEW_PROJECTION_MATRIX, CG_GL_MATRIX_IDENTITY);
-	cgGLEnableProfile(cgVertexProfile);
+	cgGLEnableProfile(cgFragmentProfile);
 	cgGLBindProgram(cgProgram);
 	cgGLSetParameter1f(wave, wavePosition);
 
@@ -56,8 +56,8 @@ void display() {
 		}
 	glEnd();
 
-	cgGLUnbindProgram(cgVertexProfile);
-	cgGLDisableProfile(cgVertexProfile);
+	cgGLUnbindProgram(cgFragmentProfile);
+	cgGLDisableProfile(cgFragmentProfile);
 
 	glFlush();
 	glutSwapBuffers();

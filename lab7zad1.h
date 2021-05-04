@@ -8,7 +8,7 @@
 
 CGcontext	cgContext;
 CGprogram	cgProgram;
-CGprofile	cgVertexProfile;
+CGprofile	cgFragmentProfile;
 CGparameter	modelViewMatrix, position, color, timerParameter;
 
 float timer = 0;
@@ -23,11 +23,11 @@ void init() {
 
 	cgContext = cgCreateContext();
 
-	cgVertexProfile = cgGLGetLatestProfile(CG_GL_VERTEX);
+	cgFragmentProfile = cgGLGetLatestProfile(CG_GL_VERTEX);
 
-	cgGLSetOptimalOptions(cgVertexProfile);
+	cgGLSetOptimalOptions(cgFragmentProfile);
 
-	cgProgram = cgCreateProgramFromFile(cgContext, CG_SOURCE, "shader3.cg", cgVertexProfile, "main", 0);
+	cgProgram = cgCreateProgramFromFile(cgContext, CG_SOURCE, "shader3.cg", cgFragmentProfile, "main", 0);
 
 	cgGLLoadProgram(cgProgram);
 	position = cgGetNamedParameter(cgProgram, "IN.position");
@@ -53,14 +53,14 @@ void display() {
 
 
 	cgGLSetStateMatrixParameter(modelViewMatrix, CG_GL_MODELVIEW_PROJECTION_MATRIX, CG_GL_MATRIX_IDENTITY);
-	cgGLEnableProfile(cgVertexProfile);
+	cgGLEnableProfile(cgFragmentProfile);
 	cgGLBindProgram(cgProgram);
 	cgGLSetParameter1f(timerParameter, timer);
 
 	glutSolidCube(0.5);
 
-	cgGLUnbindProgram(cgVertexProfile);
-	cgGLDisableProfile(cgVertexProfile);
+	cgGLUnbindProgram(cgFragmentProfile);
+	cgGLDisableProfile(cgFragmentProfile);
 
 	glFlush();
 	glutSwapBuffers();
