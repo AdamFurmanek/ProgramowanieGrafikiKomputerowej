@@ -36,6 +36,9 @@
     <Filter Include="lab8">
       <UniqueIdentifier>{bc04fabc-4333-4902-84f0-e2758a2564a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lab9">
+      <UniqueIdentifier>{d2b6e6f5-f38b-4e1e-82df-8cdebc3d4c1c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,6 +67,12 @@
     </None>
     <None Include="fragmentShader2.cg">
       <Filter>lab8</Filter>
+    </None>
+    <None Include="shader4.cg">
+      <Filter>lab9</Filter>
+    </None>
+    <None Include="fragmentShader3.cg">
+      <Filter>lab9</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +123,9 @@
     </ClInclude>
     <ClInclude Include="lab8zad2.h">
       <Filter>lab8</Filter>
+    </ClInclude>
+    <ClInclude Include="lab9zad1.h">
+      <Filter>lab9</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

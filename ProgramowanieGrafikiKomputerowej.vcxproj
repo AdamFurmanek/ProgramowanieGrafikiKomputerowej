@@ -152,10 +152,12 @@
   <ItemGroup>
     <None Include="fragmentShader1.cg" />
     <None Include="fragmentShader2.cg" />
+    <None Include="fragmentShader3.cg" />
     <None Include="packages.config" />
     <None Include="shader.cg" />
     <None Include="shader2.cg" />
     <None Include="shader3.cg" />
+    <None Include="shader4.cg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
@@ -173,6 +175,7 @@
     <ClInclude Include="lab7zad1.h" />
     <ClInclude Include="lab8zad1.h" />
     <ClInclude Include="lab8zad2.h" />
+    <ClInclude Include="lab9zad1.h" />
     <ClInclude Include="Targa.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

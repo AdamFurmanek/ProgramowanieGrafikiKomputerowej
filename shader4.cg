@@ -1,0 +1,24 @@
+struct Vertex 
+{
+	float4 position : POSITION;
+	float4 color	: COLOR0;
+};
+
+Vertex main(Vertex IN,	uniform float4x4 ModelViewProj, float timeParameter)
+{
+	Vertex OUT;		
+	//Oddalenie wektorów od œrodka 
+	IN.position.x *= sin(timeParameter);
+	IN.position.y *= sin(timeParameter);
+	IN.position.z *= sin(timeParameter);
+
+	//Kolory w zale¿noœci od po³o¿enia (têczowe).
+	IN.color.x = IN.position.x;
+	IN.color.y = IN.position.y;
+	IN.color.z = IN.position.z;
+
+	OUT.position = mul(ModelViewProj, IN.position);
+	OUT.color.xyz = IN.color.xyz;
+
+	return OUT;
+}
