@@ -150,6 +150,7 @@
     <ClCompile Include="Targa.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="fragmentShader4.cg" />
     <None Include="fragmentShader1.cg" />
     <None Include="fragmentShader2.cg" />
     <None Include="fragmentShader3.cg" />
@@ -162,6 +163,7 @@
   <ItemGroup>
     <ClInclude Include="Ball.h" />
     <ClInclude Include="cParticle.h" />
+    <ClInclude Include="lab10zad1.h" />
     <ClInclude Include="lab1zad1.h" />
     <ClInclude Include="lab0zad1.h" />
     <ClInclude Include="lab0zad2.h" />

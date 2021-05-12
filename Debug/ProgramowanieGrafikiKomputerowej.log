@@ -1,4 +1,2 @@
 ﻿  main.cpp
-C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\lab8zad2.h(16,23): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\lab8zad2.h(59,12): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
   ProgramowanieGrafikiKomputerowej.vcxproj -> C:\Dev\Microsoft Visual Studio\workspace\ProgramowanieGrafikiKomputerowej\Debug\ProgramowanieGrafikiKomputerowej.exe

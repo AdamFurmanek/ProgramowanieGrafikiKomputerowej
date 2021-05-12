@@ -1,5 +1,5 @@
 #include <iostream>
-#include "lab9zad1.h"
+#include "lab10zad1.h"
 
 using namespace std;
 
