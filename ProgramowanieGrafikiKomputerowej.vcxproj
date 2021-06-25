@@ -164,6 +164,7 @@
     <ClInclude Include="Ball.h" />
     <ClInclude Include="cParticle.h" />
     <ClInclude Include="lab10zad1.h" />
+    <ClInclude Include="lab11zad1.h" />
     <ClInclude Include="lab1zad1.h" />
     <ClInclude Include="lab0zad1.h" />
     <ClInclude Include="lab0zad2.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="lab8zad1.h" />
     <ClInclude Include="lab8zad2.h" />
     <ClInclude Include="lab9zad1.h" />
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="Targa.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -7,8 +7,8 @@
 #include <stdio.h>
 
 CGcontext	cgContext;
-CGprogram	cgProgram;
 CGprofile	cgFragmentProfile;
+CGprogram	cgProgram;
 CGparameter	modelViewMatrix, position, color, timeParameter;
 
 float myTime = 0.0;
@@ -42,13 +42,13 @@ void display() {
 	glRotatef(-10, 0.5f, 0.0f, 0.0f);
 	glRotatef(cameraY, 0.0f, 0.5f, 0.0f);
 
-
-	cgGLSetStateMatrixParameter(modelViewMatrix, CG_GL_MODELVIEW_PROJECTION_MATRIX, CG_GL_MATRIX_IDENTITY);
 	cgGLEnableProfile(cgFragmentProfile);
 	cgGLBindProgram(cgProgram);
+	cgGLSetStateMatrixParameter(modelViewMatrix, CG_GL_MODELVIEW_PROJECTION_MATRIX, CG_GL_MATRIX_IDENTITY);
 	cgGLSetParameter1f(timeParameter, myTime);
 
-	glutSolidSphere(0.5,30,30);
+	glutSolidCube(0.5);
+	//glutSolidSphere(0.5,30,30);
 
 	cgGLUnbindProgram(cgFragmentProfile);
 	cgGLDisableProfile(cgFragmentProfile);

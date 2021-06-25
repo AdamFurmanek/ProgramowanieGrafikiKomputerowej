@@ -42,6 +42,9 @@
     <Filter Include="lab10">
       <UniqueIdentifier>{dc9c9c2e-c78a-483e-aabd-4903bbd5d504}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lab11">
+      <UniqueIdentifier>{39465c73-82a0-4ff6-97a8-f7c024b41d14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -135,6 +138,12 @@
     </ClInclude>
     <ClInclude Include="lab10zad1.h">
       <Filter>lab10</Filter>
+    </ClInclude>
+    <ClInclude Include="lab11zad1.h">
+      <Filter>lab11</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>lab11</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
